@@ -1,0 +1,20 @@
+Problem 3
+
+1.
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) + geom_point() + labs(x = "Adult mass", y = "Newborn mass")
+
+2.
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) + geom_point() + labs(x = "Adult mass", y = "Newborn mass") + 
+  scale_x_log10() + scale_y_log10()
+
+3.
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) + geom_point(aes(color = order)) + labs(x = "Adult mass", y = "Newborn mass") + 
+  scale_x_log10() + scale_y_log10()
+
+4.
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) + geom_point(aes(group = order)) + labs(x = "Adult mass", y = "Newborn mass") + 
+  scale_x_log10() + scale_y_log10() + facet_wrap(~order)
+
+5.
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) + geom_point(aes(group = order)) + labs(x = "Adult mass", y = "Newborn mass") + 
+  scale_x_log10() + scale_y_log10() + facet_wrap(~order) + geom_smooth(method = lm)
