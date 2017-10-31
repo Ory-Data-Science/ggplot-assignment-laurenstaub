@@ -16,13 +16,13 @@ ggplot(data = dat, aes(x = F_mass)) +
 4.
 ggplot(data = dat, aes(x = F_mass)) + 
   geom_histogram(fill = "blue", alpha = .3) + 
-  labs(x = "Female mass (g)") + 
+  labs(x = "mass (g)") + 
   geom_histogram(aes(x = M_mass), alpha = .3, fill = "blue") +
   scale_x_log10() +facet_wrap(~ Family)
 
 5.
 ggplot(data = dat, aes(x = F_wing)) + 
   geom_histogram(fill = "blue", alpha = .3) + 
-  labs(x = "Female mass (g)") + 
+  labs(x = "wingspan") + 
   geom_histogram(aes(x = M_wing), alpha = .3, fill = "blue") +
   scale_x_log10() +facet_wrap(~ Family)
